@@ -33,7 +33,7 @@ text-comparison-tool/
 
 1. Clone this repository to your local machine:
    ```
-   git clone https://github.com/yourusername/text-comparison-tool.git
+   git clone https://github.com/jmesplana/text-comparison-tool.git
    ```
 
 2. Open the `index.html` file in a web browser.

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Comparison Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="text_comparison_tool_logo.png" alt="Logo" class="logo">
+            <div>
+                <h1>Text Comparison Tool</h1>
+                <p>Created by John Mark Esplana | <a href="https://github.com/jmesplana/Text-Comparison-Tool" target="_blank">GitHub Repository</a></p>
+            </div>
+        </div>
+    </header>
+
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Paste or type your original text into the left textarea.</li>
+            <li>Paste or type your modified text into the right textarea.</li>
+            <li>Click the "Compare" button to see the differences.</li>
+            <li>Review the results:
+                <ul>
+                    <li>Added content is highlighted in green.</li>
+                    <li>Removed content is highlighted in red.</li>
+                    <li>Word count, character count, and number of additions/removals are shown at the top of each column.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="textarea-container">
+            <textarea id="text1" placeholder="Paste original text here..."></textarea>
+        </div>
+        <div class="textarea-container">
+            <textarea id="text2" placeholder="Paste modified text here..."></textarea>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button id="compareButton">Compare</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <div class="result-container">
+        <div id="outputOriginal" class="output-column">
+            <button class="copyButton" onclick="copyToClipboard('outputOriginalContent')">Copy Original</button>
+            <div class="output-content" id="outputOriginalContent"></div>
+        </div>
+        <div id="outputModified" class="output-column">
+            <button class="copyButton" onclick="copyToClipboard('outputModifiedContent')">Copy Modified</button>
+            <div class="output-content" id="outputModifiedContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 John Mark Esplana | <a href="https://github.com/jmesplana/Text-Comparison-Tool" target="_blank">GitHub Repository</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
